@@ -7,7 +7,8 @@ int main() {
 	
 	printf("Please Enter Your Name: ");
 	fgets(name, sizeof(name), stdin);
-	
+
+	//Added a condition to remove newline at the end of the array due to the fgets() function
 	size_t length = strlen(name);
 	if (length > 0 && name[length - 1] == '\n') name[length - 1] = '\0';
 	
